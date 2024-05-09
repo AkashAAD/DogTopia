@@ -12,6 +12,23 @@ module Api
 
         render json: { image: response['message'] }
       end
+
+      def create
+        dog_profile = DogProfile.new(dog_params)
+        dog_profile.user = User.last
+
+        if dog_profile.save
+          render json: { message: 'Dog profile created sussessfully.' }, status: :ok
+        else
+          render json: { error: dog_profile.errors.full_messages.join(', ') }, status: :unprocessable_entity
+        end
+      end
+
+      private
+
+      def dog_params
+        params.permit(:name, :age, :breed, :photo)
+      end
     end
   end
 end

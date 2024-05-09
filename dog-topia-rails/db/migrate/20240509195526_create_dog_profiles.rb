@@ -4,6 +4,7 @@ class CreateDogProfiles < ActiveRecord::Migration[7.1]
       t.string :name
       t.string :breed
       t.integer :age
+      t.references :user, index: true
       t.timestamps
     end
   end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
         end
       end
 
-      resources :dogs, only: [] do
+      resources :dogs, only: [:create] do
         collection do
           get :dogs
           get :dog_image
