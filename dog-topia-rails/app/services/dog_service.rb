@@ -17,9 +17,10 @@ class DogService
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       request = Net::HTTP::Get.new(uri.path)
-      response = http.request(request)
 
-      JSON.parse(response.body)
+      http.request(request)
+    rescue => e
+      Rails.logger.error("Unexpcted error #{e.message}")
     end
   end
 end
