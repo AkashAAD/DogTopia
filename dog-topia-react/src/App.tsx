@@ -6,7 +6,8 @@ import SignIn from './Components/User/SignIn';
 import SignUp from './Components/User/SignUp';
 import NewDog from './Components/Dog/New';
 import Dogs from './Components/Dog/Index';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Page404 from './Components/Page404';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/sign-in' element={<SignIn/>} />
           <Route path='/new-dog' element={<NewDog/>} />
           <Route path='/dogs' element={<Dogs/>} />
+          <Route path='/not-found' element={<Page404/>} />
         </Routes>
       </BrowserRouter>
     </div>

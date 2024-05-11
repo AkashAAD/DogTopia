@@ -1,8 +1,19 @@
 import React from "react";
+import Page404 from '../Page404';
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const loggedInUserEmail = Cookies.get('email');
+
   return(
-    <h1>Dog Index</h1>
+    <>
+      { !loggedInUserEmail ?
+        <Page404/> :
+        <h1>Index</h1>
+      }
+    </>
   );
 }
 
