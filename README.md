@@ -1,5 +1,3 @@
-# README
-
 # [Assignment](https://github.com/pankajyadav05/ror-react-typescript/blob/master/README.md)
 
 Instructions for Rails application:
