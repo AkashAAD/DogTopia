@@ -14,7 +14,7 @@ module Api
       end
 
       def dog_image
-        response = DogService.image(params[:dog_name])
+        response = DogService.image(params[:dog_breed])
 
         render json: if response.code == '200'
           { image: JSON.parse(response.body)['message'] }
@@ -30,14 +30,14 @@ module Api
         if dog_profile.save
           render json: { message: 'Dog profile created sussessfully.' }, status: :ok
         else
-          render json: { error: dog_profile.errors.full_messages.join(', ') }, status: :unprocessable_entity
+          render json: { error: dog_profile.errors.full_messages.join(', ') }
         end
       end
 
       private
 
       def dog_params
-        params.permit(:name, :age, :breed, :photo)
+        params.permit(:name, :age, :breed, :image_url)
       end
     end
   end

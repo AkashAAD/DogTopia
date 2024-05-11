@@ -9,7 +9,7 @@ module Api
         if @user.save
           render json: @user, status: :created
         else
-          render json: { errors: @user.errors.full_messages.join(', ') }
+          render json: { error: @user.errors.full_messages.join(', ') }
         end
       end
 

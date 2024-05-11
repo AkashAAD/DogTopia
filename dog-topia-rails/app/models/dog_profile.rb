@@ -1,4 +1,5 @@
 class DogProfile < ApplicationRecord
-  has_one_attached :photo
   belongs_to :user
+
+  validates :name, :age, :breed, :image_url, presence: true
 end

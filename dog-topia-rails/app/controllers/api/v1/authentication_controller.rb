@@ -11,7 +11,7 @@ module Api
           render json: { token: token, exp: time.strftime("%m-%d-%Y %H:%M"),
                          email: @user.email }, status: :ok
         else
-          render json: { error: 'Invalid Username or Password' }, status: :unauthorized
+          render json: { error: 'Invalid Username or Password' }
         end
       end
 

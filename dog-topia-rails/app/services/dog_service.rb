@@ -4,8 +4,8 @@ class DogService
       fetch_data('breeds/list/all')
     end
 
-    def image(dog_name)
-      fetch_data("breed/#{dog_name}/images/random")
+    def image(dog_breed)
+      fetch_data("breed/#{dog_breed}/images/random")
     end
 
     private
