@@ -2,7 +2,6 @@ import React,  { useState, useEffect } from "react";
 import axios from 'axios';
 import Page404 from '../Page404';
 import Cookies from "js-cookie";
-import {  useNavigate } from "react-router-dom";
 
 const New = () => {
   const [breedsLoading, setBreedsLoading] = useState(true);
