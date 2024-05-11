@@ -29,4 +29,4 @@ Instructions for React application:
   - to run the app `npm start`
 
 
-NOTE: (App Recording)[https://www.loom.com/share/5cfe7041f1ae4b7bbc51dedf5e22f518?sid=784b5184-38eb-48d6-8f9a-49a6cff5677b]
+NOTE: [App Recording](https://www.loom.com/share/5cfe7041f1ae4b7bbc51dedf5e22f518?sid=784b5184-38eb-48d6-8f9a-49a6cff5677b)
