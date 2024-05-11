@@ -24,7 +24,7 @@ module Api
       end
 
       def index
-        dogs = DogProfile.all
+        dogs = current_user.dog_profiles
 
         render json: { dogs: dogs }
       end
