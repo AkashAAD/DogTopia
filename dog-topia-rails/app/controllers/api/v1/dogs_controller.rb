@@ -23,6 +23,12 @@ module Api
         end
       end
 
+      def index
+        dogs = DogProfile.all
+
+        render json: { dogs: dogs }
+      end
+
       def create
         dog_profile = DogProfile.new(dog_params)
         dog_profile.user = current_user
