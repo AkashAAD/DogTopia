@@ -11,7 +11,7 @@ Instructions for Rails application:
   - cd `DogTopia/dog-topia-rails`
   - run `gem install bundler`
   - run `bundle install`
-  - setup `database.yml`
+  - setup `database.yml` with `username` and `password` of your pg database.
   - run `rails db:create db:migrate`
   - to run the app `rails s -p 5000`
 
