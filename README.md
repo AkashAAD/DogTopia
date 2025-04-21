@@ -1,5 +1,3 @@
-# [Assignment](https://github.com/pankajyadav05/ror-react-typescript/blob/master/README.md)
-
 Instructions for Rails application:
 
 * Ruby version - 3.3.0
